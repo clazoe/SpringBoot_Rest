@@ -1,6 +1,6 @@
 # SpringBoot_Rest
 
-Postgres creation tables
+Postgres tables creation
 
 CREATE TABLE public.persona
 (
