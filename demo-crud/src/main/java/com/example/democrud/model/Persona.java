@@ -31,7 +31,6 @@ public class Persona {
 	@Column
 	private String telefono;
 	
-    
     @OneToMany(cascade = CascadeType.ALL, fetch= FetchType.LAZY)
 	@JoinColumn(name = "persona_id", referencedColumnName="id")
 	private List <Automovil> automoviles;
