@@ -21,5 +21,5 @@ CREATE TABLE public.automovil
     modelo varchar(50) COLLATE pg_catalog."default",
     persona_id integer NOT NULL,
     CONSTRAINT automovil_primary_key PRIMARY KEY (id),
-    CONSTRAINT persona_foreign_key FOREIGN KEY (persona_id) REFERENCES public.persona (id)
+    CONSTRAINT persona_id FOREIGN KEY (persona_id) REFERENCES public.persona (id)
 )
