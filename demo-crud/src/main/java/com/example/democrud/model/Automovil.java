@@ -2,13 +2,9 @@ package com.example.democrud.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Automovil {
@@ -26,9 +22,6 @@ public class Automovil {
 	@Column
 	private String modelo;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(foreignKey = @ForeignKey(name = "persona_id"), name = "persona_id")
-	private Persona persona;
 	
 	public Long getId() {
 		return id;
@@ -62,11 +55,5 @@ public class Automovil {
 		this.modelo = modelo;
 	}
 
-	public Persona getPersona() {
-		return persona;
-	}
-
-	public void setPersona(Persona persona) {
-		this.persona = persona;
-	}
+	
 }
